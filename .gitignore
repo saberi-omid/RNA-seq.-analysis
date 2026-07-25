@@ -1,0 +1,39 @@
+# --- Raw & intermediate sequencing data (too big for GitHub) ---
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.sam
+*.bai
+*.cram
+*.vcf
+*.vcf.gz
+
+# --- Large data / results folders ---
+data/
+raw_data/
+results/
+output/
+counts/
+
+# --- R session & history junk ---
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rproj.user/
+
+# --- renv (keep lockfile, ignore the library) ---
+renv/library/
+renv/local/
+renv/cellar/
+renv/staging/
+
+# --- Rendered output ---
+*_cache/
+*_files/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
