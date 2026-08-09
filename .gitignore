@@ -1,44 +1,20 @@
-# --- Raw & intermediate sequencing data (too big for GitHub) ---
-*.fastq
-*.fastq.gz
-*.fq
-*.fq.gz
-*.bam
-*.sam
-*.bai
-*.cram
-*.vcf
-*.vcf.gz
-
-# --- Large data / results folders (ignore contents, keep the folder) ---
+# Raw and processed sequencing data
 data/*
 !data/.gitkeep
-raw_data/*
-!raw_data/.gitkeep
-results/*
-!results/.gitkeep
-output/*
-!output/.gitkeep
-counts/*
-!counts/.gitkeep
 
-# --- R session & history junk ---
-.Rhistory
-.Rapp.history
-.RData
-.Ruserdata
-.Rproj.user/
+# Reference genome indexes
+reference/
 
-# --- renv (keep lockfile, ignore the library) ---
-renv/library/
-renv/local/
-renv/cellar/
-renv/staging/
+# Tool binaries
+software/
 
-# --- Rendered output ---
-*_cache/
-*_files/
+# Analysis outputs
+output/
+logs/
 
-# --- OS junk ---
-.DS_Store
-Thumbs.db
+# Large alignment files
+*.sam
+*.bam
+*.bam.bai
+*.fastq
+*.fastq.gz
