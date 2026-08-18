@@ -1,0 +1,4 @@
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /root/rnaseq_course/data/raw/SRR031714_1.fastq.gz /root/rnaseq_course/data/raw/SRR031714_2.fastq.gz /root/rnaseq_course/data/trimmed/SRR031714_1_paired.fastq.gz /root/rnaseq_course/data/trimmed/SRR031714_1_unpaired.fastq.gz /root/rnaseq_course/data/trimmed/SRR031714_2_paired.fastq.gz /root/rnaseq_course/data/trimmed/SRR031714_2_unpaired.fastq.gz LEADING:3 TRAILING:15 SLIDINGWINDOW:4:20 MINLEN:25
+Input Read Pairs: 5327425 Both Surviving: 5127040 (96.24%) Forward Only Surviving: 83801 (1.57%) Reverse Only Surviving: 73572 (1.38%) Dropped: 43012 (0.81%)
+TrimmomaticPE: Completed successfully

@@ -1,0 +1,14 @@
+# Raw and processed sequencing data
+data/*
+!data/.gitkeep
+
+# Genome indexes
+reference/
+
+# Alignment output
+*.sam
+*.bam
+*.bai
+
+# FastQC output
+output/
