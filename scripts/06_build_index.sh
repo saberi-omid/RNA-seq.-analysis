@@ -49,3 +49,31 @@ echo "Step 3: archiving standard index"
 tar -czvf schizo_index.tar.gz schizo_index*.ht2
 ls -lh schizo_index.tar.gz
 
+# --- Step 4: Extract splice sites and exons from GTF
+
+echo "Step 4: extracting splice sites and exons from GTF"
+
+hisat2_extract_splice_sites.py $ANNOTATION > schizo_ss.txt
+hisat2_extract_exons.py $ANNOTATION > schizo_exon.txt
+
+echo "Splice sites extracted:"
+wc -l schizo_ss.txt
+
+echo "Exons extracted:"
+wc -l schizo_ss.txt
+
+echo "First 3 lines of splice sites:"
+head -3 schizo_ss.txt
+
+echo "First 3 lines of exons:"
+head -3 schizo_exon.txt
+
+# Step 5: Transciptome-aware index (with splice sites + exons) -------
+
+echo "Step 5: building transcriptome-aware genome index"
+hisat2-build -p $THREADS --ss schizo_ss.txt --exon schizo_exon.txt $GENOME schizo_tran
+
+ls -lh schizo_tran.ht2
+
+echo "Step 5: Complete. Transciptome-aware index built."
+
