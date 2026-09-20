@@ -18,3 +18,12 @@ logs/
 *.bam.bai
 *.fastq
 *.fastq.gz
+# Editor / OS junk
+.Rhistory
+.RData
+.DS_Store
+
+# Editor / OS junk
+.Rhistory
+.RData
+.DS_Store
